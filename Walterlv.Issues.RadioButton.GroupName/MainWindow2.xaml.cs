@@ -4,15 +4,15 @@ using System.Windows;
 
 namespace Walterlv.Issues
 {
-    public partial class MainWindow : Window
+    public partial class MainWindow2 : Window
     {
-        public MainWindow()
+        public MainWindow2()
         {
             InitializeComponent();
         }
     }
 
-    public class Foo : INotifyPropertyChanged
+    public class Foo2 : INotifyPropertyChanged
     {
         public static Foo Instance { get; } = new Foo();
 

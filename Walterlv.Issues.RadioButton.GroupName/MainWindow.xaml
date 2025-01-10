@@ -5,16 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Walterlv.Issues"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <StackPanel>
-        <Border>
-            <RadioButton GroupName="A" IsChecked="{Binding Bar, Source={x:Static local:Foo.Instance}}" Content="Option 1" />
-        </Border>
-        <Border>
-            <RadioButton GroupName="A" Content="Option 2" />
-        </Border>
-        <Border>
-            <RadioButton GroupName="A" Content="Option 3" />
-        </Border>
-    </StackPanel>
+        Title="MainWindow" Height="450" Width="800" DataContext="{Binding Source={x:Static local:Foo.Instance}}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <Border>
+                <RadioButton GroupName="A" IsChecked="{Binding Bar}" Content="Option 1"/>
+            </Border>
+            <Border>
+                <RadioButton GroupName="A" IsChecked="{Binding Kitty}" Content="Option 2" />
+            </Border>
+            <Border>
+                <RadioButton GroupName="A" Content="Option 3" />
+            </Border>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1">
+            <Border>
+                <RadioButton GroupName="A" IsChecked="{Binding Kitty}" Content="Option 1"/>
+            </Border>
+            <Border>
+                <RadioButton GroupName="A" IsChecked="{Binding Bar}" Content="Option 2" />
+            </Border>
+            <Border>
+                <RadioButton GroupName="A" Content="Option 3" />
+            </Border>
+        </StackPanel>
+    </Grid>
+    
+    
+
+ 
 </Window>

@@ -1,0 +1,20 @@
+﻿<Window x:Class="Walterlv.Issues.MainWindow2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Walterlv.Issues"
+        mc:Ignorable="d"
+        Title="MainWindow2" Height="450" Width="800" DataContext="{Binding Source={x:Static local:Foo.Instance}}">
+    <StackPanel>
+        <Border>
+            <RadioButton GroupName="A" IsChecked="{Binding Kitty}" Content="Option 1"/>
+        </Border>
+        <Border>
+            <RadioButton GroupName="A" IsChecked="{Binding Bar}" Content="Option 2" />
+        </Border>
+        <Border>
+            <RadioButton GroupName="A" Content="Option 3" />
+        </Border>
+    </StackPanel>
+</Window>

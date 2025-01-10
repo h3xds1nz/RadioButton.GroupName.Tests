@@ -28,9 +28,16 @@ namespace Walterlv.Issues
             }.Show();
         }
 
+        int counter = 0;
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+        //    if ((counter & 1) == 0)
             new MainWindow().Show();
+            //else
+            //    new MainWindow2().Show();
+
+            counter++;
         }
     }
 }
